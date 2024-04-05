@@ -10,8 +10,7 @@ class Proyecto{
         $consulta="SELECT * FROM proyecto";
         $resultado=$cnn->prepare($consulta);
         $resultado->execute();
-        while( $fila =$resultado->
-        fetchAll(PDO::FETCH_ASSOC)){
+        while( $fila =$resultado->fetchAll(PDO::FETCH_ASSOC)){
             $this->listaproyectos[]=$fila;
         }
         return $this->listaproyectos;
@@ -45,10 +44,27 @@ class Proyecto{
 
     }
     public function EliminarProyecto($condicion){
-
+        include_once('conexion.php');
+        $cnn=new Conexion();
+        $consulta="DELETE FROM Proyectos WHERE ".$condicion;
+        $resultado=$cnn->prepare($consulta);
+        $resultado->execute();
+        if($resultado){
+            return true;
+        }else{
+            return false;
+        }
     }
     public function ObtenerProyectoId($condicion){
-
+        include_once('conexion.php');
+        $cnn=new Conexion();
+        $consulta="SELECT * FROM proyecto WHERE ".$condicion;
+        $resultado=$cnn->prepare($consulta);
+        $resultado->execute();
+        while( $fila =$resultado->fetchAll(PDO::FETCH_ASSOC)){
+            $this->listaproyectos[]=$fila;
+        }
+        return $this->listaproyectos;
     }
 }
 ?>
