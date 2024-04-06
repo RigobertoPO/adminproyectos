@@ -9,7 +9,7 @@ class proyectosController{
     public static function proyectos(){
         $proyecto=new Proyecto();
         $datos=$proyecto->ObtenerDatos();
-        require_once("vista/proyectos/index.php");
+        require_once("vista/proyectos/mostrar.php");
     }
 
 }
