@@ -7,7 +7,7 @@ class Proyecto{
     public function ObtenerDatos(){
         include_once('conexion.php');
         $cnn=new Conexion();
-        $consulta="SELECT * FROM proyecto";
+        $consulta="SELECT * FROM proyectos";
         $resultado=$cnn->prepare($consulta);
         $resultado->execute();
         while( $fila =$resultado->fetchAll(PDO::FETCH_ASSOC)){
@@ -58,7 +58,7 @@ class Proyecto{
     public function ObtenerProyectoId($condicion){
         include_once('conexion.php');
         $cnn=new Conexion();
-        $consulta="SELECT * FROM proyecto WHERE ".$condicion;
+        $consulta="SELECT * FROM proyectos WHERE ".$condicion;
         $resultado=$cnn->prepare($consulta);
         $resultado->execute();
         while( $fila =$resultado->fetchAll(PDO::FETCH_ASSOC)){

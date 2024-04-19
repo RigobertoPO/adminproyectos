@@ -6,7 +6,7 @@ body{
     background-color: darkgray;
 }
 h1{
-    color: deepskyblue;
+    color: rgb(7, 34, 43);
 }
 ul li{
     color: rebeccapurple;
@@ -88,5 +88,8 @@ footer h6{
 }
 .texto{
     color: blue;
+}
+footer .textofooter{
+    color: rgb(204, 204, 207);
 }
 

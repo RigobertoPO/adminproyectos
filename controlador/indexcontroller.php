@@ -6,6 +6,9 @@ class indexController{
     public static function index(){
         require_once("vista/index.php");
     }
+    public static function contacto(){
+        require_once("vista/contacto.php");
+    }
     public static function login(){
         require_once("vista/login.php");
     }
