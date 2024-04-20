@@ -17,6 +17,7 @@
                     <li><a href="index.php">Inicio</a></li>
                     <li><a href="quiensoy.php">¿Quién soy?</a></li>
                     <li><a href="index.php?p=mostrarproyectos">Proyectos</a></li>  
+                    <li><a href="index.php?u=mostrarusuarios">Usuarios</a></li>  
                     <li><a href="index.php?i=contacto">Contáctanos</a></li>               
                 </ul>
             </div>
