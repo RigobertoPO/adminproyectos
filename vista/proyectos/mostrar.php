@@ -1,5 +1,6 @@
 <?php require "vista/layout/header.php";?>
 <h1>Lista de proyectos</h1>
+<a href="index.php?p=nuevo">Nuevo proyecto</a>
 <div>
     <table class="table">
         <thead class="thead-dark">
@@ -17,6 +18,7 @@
                         echo '<td>'.$item['Clave'].'</td>';
                         echo '<td>'.$item['Nombre'].'</td>';
                         echo '<td>'.$item['Caratula'].'</td>';
+                        echo '<td><a href=index.php?p=eliminar&id='.$item['Id'].'>Eliminar</a></td>';
                         echo '</tr>';
                     }
                     
