@@ -7,7 +7,7 @@ class Index{
     public function AutentificarUsuario($condicion){
         include_once('conexion.php');
         $cnn=new Conexion();
-        $consulta="SELECT * FROM Usuarios ".$condicion;
+        $consulta="SELECT * FROM Usuarios where ".$condicion;
         $resultado=$cnn->prepare($consulta);
         $resultado->execute();
         while( $fila =$resultado->fetchAll(PDO::FETCH_ASSOC)){

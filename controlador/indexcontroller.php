@@ -18,10 +18,10 @@ class indexController{
     public static function autentificar(){
         $correo=$_REQUEST['correo'];
         $password=$_REQUEST['pass'];
-        $condicion="Correo='".$correo."' and Password='".$password."'";
+        $condicion  ="Correo='".$correo."' AND Password='".$password."'";
         $usuario=new Index();
         $usuarioLogueado=$usuario->AutentificarUsuario($condicion);
-        require_once("vista/index.php");
+        require_once("vista/contacto.php");	
     }
     public static function cerrarSesion(){
         session_start();

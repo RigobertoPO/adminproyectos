@@ -26,7 +26,7 @@
             <div class="Slider-DatosPersonales">
                 <h1>Licenciatura en sistemas Computacionales</h1>
                 <p class="Perfil">Seguimiento de proyecto</p>
-                <a href="index.php?m=login" class="btn btn-primary">Suscribirme</a>
+                <a href="index.php?i=login" class="btn btn-primary">Suscribirme</a>
             </div>
         </div>
     </header>
