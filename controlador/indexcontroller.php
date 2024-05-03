@@ -21,7 +21,7 @@ class indexController{
         $condicion  ="Correo='".$correo."' AND Password='".$password."'";
         $usuario=new Index();
         $usuarioLogueado=$usuario->AutentificarUsuario($condicion);
-        require_once("vista/contacto.php");	
+        header("location:".urlsite. "index.php?i=index");
     }
     public static function cerrarSesion(){
         session_start();
