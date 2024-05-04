@@ -21,6 +21,14 @@ class indexController{
         $condicion  ="Correo='".$correo."' AND Password='".$password."'";
         $usuario=new Index();
         $usuarioLogueado=$usuario->AutentificarUsuario($condicion);
+        session_start();
+        foreach($usuarioLogueado as $key=>$value)
+            foreach($value as $item):
+                $_SESSION["correoUsuario"]=$item['Correo'];
+                $_SESSION["nombreUsuario"]=$item['NombreCompleto'];
+                $_SESSION["idUsuario"]=$item['Id'];
+                $_SESSION["tipoUsuario"]=$item['TipoUsuario'];
+        endforeach;
         header("location:".urlsite. "index.php?i=index");
     }
     public static function cerrarSesion(){
